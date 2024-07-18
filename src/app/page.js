@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react';
-import { Button, Container, Typography, TextField, Dialog, DialogActions, DialogContent, DialogTitle, List, ListItem, ListItemText } from '@mui/material';
+import { Button, Container, Typography, TextField,  List, ListItem, ListItemText } from '@mui/material';
 import styles from './page.module.css'
 import Link from 'next/link';
 
@@ -11,11 +11,6 @@ const Home = () => {
   const [newBook, setNewBook] = useState('');
   const [search, setSearch] = useState('');
 
-  const handleAddBook = () => {
-    setBooks([...books, newBook]);
-    setNewBook('');
-    setOpen(false);
-  };
 
   const handleSearch = (event) => {
     setSearch(event.target.value);
@@ -25,9 +20,8 @@ const Home = () => {
 
   return (
     <Container className={styles.main}>
-      <Typography variant="h2" className={styles.header}>Recopilación de libros</Typography>
+      <Typography variant="h2" className={styles.header}>Tus Libros a un click</Typography>
       <div className={styles.buttonGroup}>
-        <Button variant="contained" onClick={() => setOpen(true)}>Agregar Libro</Button>
         <TextField label="Buscar Libros" variant="outlined" value={search} onChange={handleSearch} />
       </div>
       <List>
@@ -37,25 +31,9 @@ const Home = () => {
           </ListItem>
         ))}
       </List>
-      <Dialog open={open} onClose={() => setOpen(false)}>
-        <DialogTitle>Agregar Nuevo Libro</DialogTitle>
-        <DialogContent>
-          <TextField
-            autoFocus
-            margin="dense"
-            label="Nombre del Libro"
-            type="text"
-            fullWidth
-            value={newBook}
-            onChange={(e) => setNewBook(e.target.value)}
-          />
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={() => setOpen(false)}>Cancelar</Button>
-          <Button onClick={handleAddBook}>Agregar</Button>
-
-        </DialogActions>
-      </Dialog>
+      <Link href="/AgregarLibros" passHref>
+          <Button variant="contained">Agregar Libros</Button>
+        </Link>
       <Link href="/VerLibros" passHref>
           <Button variant="contained">Ver Libros</Button>
         </Link>
