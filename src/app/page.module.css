@@ -4,10 +4,32 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  background-color: #ffe4c4; /* Fondo cálido */
+  min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la pantalla */
 }
 
 .header {
   margin-bottom: 2rem;
+  color: #333; /* Asegura que el texto sea legible */
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #ffe4c4; /* Fondo cálido */
+  min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la pantalla */
+}
+
+.header {
+  margin-bottom: 2rem;
+  color: #333; /* Asegura que el texto sea legible */
 }
 
 .buttonGroup {

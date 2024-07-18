@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Button, Container, Typography, TextField, Dialog, DialogActions, DialogContent, DialogTitle, List, ListItem, ListItemText } from '@mui/material';
 import styles from './page.module.css'
+import Link from 'next/link';
 
 
 const Home = () => {
@@ -52,8 +53,12 @@ const Home = () => {
         <DialogActions>
           <Button onClick={() => setOpen(false)}>Cancelar</Button>
           <Button onClick={handleAddBook}>Agregar</Button>
+
         </DialogActions>
       </Dialog>
+      <Link href="/VerLibros" passHref>
+          <Button variant="contained">Ver Libros</Button>
+        </Link>
       <Typography variant="body1" className={styles.header}>
         <strong>Objetivo de la Aplicación:</strong> Gestionar y buscar o agregar libros de manera eficiente.
       </Typography>
