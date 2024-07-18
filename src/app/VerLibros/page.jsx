@@ -91,9 +91,11 @@ const VerLibros = () => {
                   variant="contained"
                   color="secondary"
                   onClick={() => handleDelete(book._id)}
+                  disabled={true} // Puedes cambiar esta condición según necesites
                 >
                   Eliminar
                 </Button>
+
               </CardContent>
             </Card>
           </ListItem>
