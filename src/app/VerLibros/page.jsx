@@ -27,7 +27,7 @@ const VerLibros = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://apisergiecode.onrender.com/books/${id}`);
+     // await axios.delete(`https://apisergiecode.onrender.com/books/${id}`);
       // Actualiza la lista de libros después de la eliminación
       fetchBooks();
     } catch (err) {
