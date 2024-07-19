@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,15 +17,23 @@ export default function RootLayout({ children }) {
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <link rel="icon" href="/iconoBook.png" /> 
+        <link rel="icon" href="public\iconoapp.png" /> 
       </Head>
       <body className={inter.className}>
         <nav>
-          <h1>Tus Libros a un Click</h1>
+        <div className="logoContainer">
+        <Image 
+          src="/logoBook.png" 
+          alt="Logo" 
+          width={60}
+          height={60}
+          style={{ borderRadius: '50%' }} 
+        />
+
+        <h1>Tus Libros a un Click</h1>
+      </div>
           <ul>
-            <li>
               <Link href="/">Inicio</Link>
-            </li>
           </ul>
         </nav>
         <br />

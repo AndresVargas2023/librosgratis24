@@ -12,6 +12,12 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el logo y el título */
+}
+
 
 nav {
   background-color: #ed4d4d;
