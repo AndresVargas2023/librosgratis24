@@ -8,7 +8,9 @@
   justify-content: center;
   margin-bottom: 20px;
 }
-
+.search{
+  background-color: aliceblue;
+}
 .header {
   margin-top: 20px;
 }

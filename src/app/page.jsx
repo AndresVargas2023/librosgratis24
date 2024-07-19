@@ -15,7 +15,7 @@ const Home = () => {
       </Typography>
 
       <Typography variant="body1" paragraph className={styles.description}>
-        <strong>Objetivo:</strong>
+        <strong>ObjetivoS:</strong>
       </Typography>
       
       <div className={styles.objectiveList}>

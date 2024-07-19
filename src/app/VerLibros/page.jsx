@@ -12,7 +12,7 @@ const VerLibros = () => {
 
   const fetchBooks = async () => {
     try {
-      const response = await axios.get('https://apisergiecode.onrender.com/books');
+      const response = await axios.get(process.env.NEXT_PUBLIC_API_BOOKS);
       console.log('Datos de la API:', response.data); // Log para verificar los datos
       setBooks(response.data);
     } catch (err) {
@@ -58,12 +58,13 @@ const VerLibros = () => {
 
   return (
     <Container sx={{ backgroundColor: '#ffe4c4', padding: '20px' }}>
-      <Typography variant="h2" gutterBottom>Lista de Libros</Typography>
+      <Typography variant="h2" gutterBottom>Libros</Typography>
 
       <Grid container spacing={2} alignItems="center" justifyContent="center" className={styles.buttonGroup}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={10}>
           <TextField 
             fullWidth
+            className={styles.search}
             label="Buscar Libros" 
             variant="outlined" 
             value={search} 
@@ -110,7 +111,7 @@ const VerLibros = () => {
                       rel="noopener noreferrer"
                       sx={{ marginRight: '10px' }}
                     >
-                      Descargar
+                      Link
                     </Button>
                   )}
                   <Button
