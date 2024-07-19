@@ -1,15 +1,20 @@
 /* globals.css */
 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
 /* Estilos globales para el cuerpo y la navegación */
 body {
-  font-family: 'Inter', sans-serif; /* Asegúrate de tener Inter cargado */
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #a8d367;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 nav {
-  background-color: #333;
+  background-color: #ed4d4d;
   color: white;
   padding: 10px 20px;
   display: flex;
@@ -30,4 +35,77 @@ nav a {
 
 nav a:hover {
   text-decoration: underline;
+}
+
+.main {
+  padding: 20px;
+  flex: 1; /* Esto permite que el contenido principal ocupe el espacio disponible */
+}
+
+.description {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.objectiveList {
+  margin-bottom: 20px;
+}
+
+.buttonGroup {
+  margin-top: 20px;
+}
+
+.linkButton {
+  margin: 0 10px;
+}
+
+footer {
+  background-color: #f1f1f1;
+  padding: 20px 0;
+  text-align: center;
+  /* Se asegura de que el footer siempre esté al final */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 0 0 10px;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-content ul li a {
+  text-decoration: none;
+  color: #0070f3;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0070f3;
+  font-size: 1.5em;
+}
+
+.footer-social .fa-envelope:before {
+  content: "\f0e0"; /* Font Awesome envelope icon */
+}
+
+.footer-social .fa-whatsapp:before {
+  content: "\f40c"; /* Font Awesome WhatsApp icon */
 }

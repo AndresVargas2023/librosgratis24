@@ -1,4 +1,3 @@
-// layout.js
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Link from 'next/link';
@@ -15,18 +14,33 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <nav>
-          <h1>NAVEGACIÓN</h1>
+          <h1>Tus Libros a un Click</h1>
           <ul>
             <li>
               <Link href="/">Inicio</Link>
-            </li>
-            <li>
-              <Link href="/dashboard">Acerca de "Tus Libros a un Click</Link>
             </li>
           </ul>
         </nav>
         <br />
         {children}
+        <footer>
+          <div className="footer-content">
+            <p>&copy; 2024 Tus Libros a un Click. Todos los derechos reservados.</p>
+            <ul>
+              <li><Link href="/about">Sobre Nosotros</Link></li>
+              <li><Link href="/privacy">Política de Privacidad</Link></li>
+              <li><Link href="/terms">Términos de Servicio</Link></li>
+            </ul>
+            <div className="footer-social">
+              <a href="mailto:av6135@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i ></i> 📧Correo
+              </a>
+              <a href="https://wa.me/qr/J6PZJ6S3AP2BK1" target="_blank" rel="noopener noreferrer">
+                <i></i>📲 WhatsApp
+              </a>
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );
